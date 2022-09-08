@@ -8,10 +8,128 @@
 <body>
 
     <header></header>
-    <main></main>
-    <footer></footer>
+
+    <main>
+        <textarea id="txtAccion"></textarea>
+        <button id="btnEncriptar">Encriptar</button>
+        <button id="btnDesencriptar">Desencriptar</button>
+        <div id="txtResultado"></div>
+        <button id="btnCopiar">Copiar</button>
+    </main>
+
+    <footer>
+        <p>Alan Montes de Oca Garcia</p>
+        <p>tra.amdog5@gmail.com</p>
+    </footer>
     
 </body>
 </html>
 
-<script></script>
+<script>
+
+    var btnEncriptar = document.getElementById('btnEncriptar');
+    var btnDesencriptar = document.getElementById('btnDesencriptar');
+    var btnCopiar = document.getElementById('btnCopiar');
+    var txtAccion = document.getElementById('txtAccion');
+    var txtResultado = document.getElementById('txtResultado');
+
+    var vocales = ["a", "e", "i", "o", "u"];
+    var codigo = ["ai", "enter", "imes", "ober", "ufat"];
+    var resultado = "";
+
+    function validar(letras){
+        
+        var continuar = true;
+
+        for(var pLetras = 0; pLetras < letras.length; pLetras++){
+
+            var pattern = new RegExp(/^[a-z\s]+$/);
+
+            if(!pattern.test(letras[pLetras])){
+                continuar = false;
+                break;
+            }
+        }
+
+        return continuar;
+    }
+
+    function encriptar (){
+        if(txtAccion.value != "" && txtAccion.value != null){
+            var letras = txtAccion.value.split('');
+        
+            if(validar(letras)){
+                for(var pLetras = 0; pLetras < letras.length; pLetras++){
+                    for(var pVocales = 0; pVocales < vocales.length; pVocales++){
+                        if(letras[pLetras] == vocales[pVocales]){
+                            letras[pLetras] = codigo[pVocales];
+                        } 
+                    }
+                }
+            
+                for(var pLetras = 0; pLetras < letras.length; pLetras++){
+                    resultado = resultado + letras[pLetras];
+                }
+            
+                txtResultado.innerHTML = resultado;
+                resultado = "";
+
+                txtAccion.value = "";
+                
+                limpiar("correcto");
+            }else{
+                limpiar("caracterinvalido");
+            }
+        }else{
+            limpiar("vacio");
+        }
+    }
+
+    function desencriptar(){
+        if(txtAccion.value != "" && txtAccion.value != null){
+            var resultado = txtAccion.value;
+        
+            if(validar(resultado.split(''))){
+                while(resultado.includes("ai") || resultado.includes("enter") || resultado.includes("imes") || resultado.includes("ober") || resultado.includes("ufat")){
+                    for(var pCodigo = 0; pCodigo < codigo.length; pCodigo++){
+                        resultado = resultado.replace(codigo[pCodigo], vocales[pCodigo]);
+                    }
+                }
+            
+                txtResultado.innerHTML = resultado;
+                resultado = "";
+                
+                txtAccion.value = "";
+                
+                limpiar("correcto");
+            }else{
+                limpiar("caracterinvalido");
+            }
+        }else{
+            limpiar("vacio");
+        }
+    }
+
+    function copiar(){
+        navigator.clipboard.writeText(txtResultado.innerHTML);
+    }
+
+    function limpiar(proceso){
+        if(proceso == "vacio"){
+            txtResultado.innerHTML = "";
+        }
+
+        if(proceso == "caracterinvalido"){
+            txtResultado.innerHTML = "";
+        }
+
+        if(proceso == "correcto"){
+            
+        }
+    }
+
+    btnEncriptar.onclick = encriptar;
+    btnDesencriptar.onclick = desencriptar;
+    btnCopiar.onclick = copiar;
+
+</script>
