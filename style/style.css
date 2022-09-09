@@ -133,13 +133,17 @@ main{
 #munheco{
     width: 70%;
 
-    margin: 30% 15% 0 15%;
+    margin-top: 160px;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 #mensajeEspera{
     width: 70%;
 
-    margin: 5% 15% 0 15%;
+    margin-top: 25px;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 .mensajeUno{
@@ -181,7 +185,9 @@ main{
 
     color: #343A40;
 
-    margin: 5% 15% 0 15%;
+    margin-top: 25px;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 /*Texto Resultado*/
