@@ -3,24 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
     <title>Encriptador</title>
 </head>
 <body>
 
-    <header></header>
+    <header>
+        <h1><img src="img/Logo.svg" alt="Logo Alura"></h1>
+    </header>
 
     <main>
-        <textarea id="txtAccion"></textarea>
-        <button id="btnEncriptar">Encriptar</button>
-        <button id="btnDesencriptar">Desencriptar</button>
-        <div id="txtResultado"></div>
-        <button id="btnCopiar">Copiar</button>
+        <section class="secAccion">
+            <textarea id="txtAccion" placeholder="Ingrese el texto aqui" autofocus></textarea>
+
+            <p>
+                <img src="img/Advertencia.svg" alt="Requisitos Del Texto">
+                Solo letras minúsculas y sin acentos
+            </p>
+
+            <div class="btnsAccion">
+                <button id="btnEncriptar">Encriptar</button>
+                <button id="btnDesencriptar">Desencriptar</button>
+            </div>
+        </section>
+
+        <section class="secResultado">
+            <img id="munheco" src="img/Munheco.svg" alt="Muñeco Buscando">
+            
+            <div id="mensajeEspera">
+                <p class="mensajeUno">
+                    Ningún mensaje fue encontrado
+                </p>
+                <p class="mensajeDos">
+                    Ingresa el texto que desees encriptar o desencriptar.
+                </p>    
+            </div>
+
+            <div id="mensajeError">
+                <p>
+                    Caracteres invalidos en el mensaje
+                </p>
+            </div>
+
+            <div id="txtResultado"></div>
+            <button id="btnCopiar">Copiar</button>
+        </section>
     </main>
 
     <footer>
-        <p>Alan Montes de Oca Garcia</p>
-        <p>tra.amdog5@gmail.com</p>
+        <img src="img/Logo.svg" alt="Logo Alura">
+        <div class="datosDesarrollador">
+            <p>Diseñado Por:</p>
+            <p>Alan Montes de Oca Garcia</p>
+        </div>
     </footer>
     
 </body>
@@ -33,6 +72,10 @@
     var btnCopiar = document.getElementById('btnCopiar');
     var txtAccion = document.getElementById('txtAccion');
     var txtResultado = document.getElementById('txtResultado');
+
+    var munheco = document.getElementById('munheco');
+    var mensajeEspera = document.getElementById('mensajeEspera');
+    var mensajeError = document.getElementById('mensajeError');
 
     var vocales = ["a", "e", "i", "o", "u"];
     var codigo = ["ai", "enter", "imes", "ober", "ufat"];
@@ -118,14 +161,28 @@
     function limpiar(proceso){
         if(proceso == "vacio"){
             txtResultado.innerHTML = "";
+            txtResultado.style.display = "none";
+            btnCopiar.style.display = "none";
+            mensajeError.style.display = "none";
+            munheco.style.display = "block";
+            mensajeEspera.style.display = "block";
         }
 
         if(proceso == "caracterinvalido"){
             txtResultado.innerHTML = "";
+            txtResultado.style.display = "none";
+            btnCopiar.style.display = "none";
+            mensajeEspera.style.display = "none";
+            munheco.style.display = "block";
+            mensajeError.style.display = "block";
         }
 
         if(proceso == "correcto"){
-            
+            munheco.style.display = "none";
+            mensajeEspera.style.display = "none";
+            mensajeError.style.display = "none";
+            txtResultado.style.display = "block";
+            btnCopiar.style.display = "block";
         }
     }
 

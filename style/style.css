@@ -1,0 +1,250 @@
+body{
+    font-family: 'Lora', serif;
+
+    background: #F3F5FC;
+}
+
+/*Logo*/
+h1 img{
+    position: absolute;
+    width: 120px;
+    height: 48px;
+    left: 40px;
+    top: 40px;
+}
+
+main{
+    display: flex;
+    padding: 40px;
+}
+
+/*Seccion Accion*/
+.secAccion{
+    display: inline-block;
+
+    width: 70%;
+}
+
+/*Ingresar Texto*/
+#txtAccion{
+    width: 75%;
+    height: 550px;
+
+    margin: 10% 10% 0 15%;
+
+    padding: 0;
+    border: none;
+    resize: none;
+    
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+
+    color: #0A3871;
+
+    background: #F3F5FC;
+}
+
+#txtAccion::placeholder{
+    color: #0A3871;
+}
+
+#txtAccion:focus{
+    outline: none;
+}
+
+/*Imagen Advertencia*/
+.secAccion p img{
+    width: 12px;
+}
+
+/*Requisitos de Texto*/
+.secAccion P{
+    width: 30%;
+
+    margin: 20px 0 5px 15%;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+
+    color: #495057;
+
+    opacity: 0.8;
+}
+
+/*Botones Accion*/
+.btnsAccion{
+    display: flex;
+    gap: 10%;
+    
+    height: 77px;
+    width: 75%;
+
+    margin: 0 10% 0 15%;
+}
+
+#btnEncriptar{
+    width: 45%;
+
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 19px;
+
+    text-align: center;
+    
+    color: #FFFFFF;
+
+    background: #0A3871;
+    border-radius: 24px;
+}
+
+#btnDesencriptar{
+    width: 45%;
+
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 19px;
+
+    text-align: center;
+
+    color: #0A3871;
+
+    background: #D8DFE8;
+
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+}
+
+/*Seccion Resultado*/
+.secResultado{
+    display: inline-block;
+    width: 29%;
+    height: 838px;
+
+    background: #FFFFFF;
+
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+}
+
+/*Imagen Muñeco Buscando*/
+#munheco{
+    width: 70%;
+
+    margin: 30% 15% 0 15%;
+}
+
+#mensajeEspera{
+    width: 70%;
+
+    margin: 5% 15% 0 15%;
+}
+
+.mensajeUno{
+    height: 66px;
+
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 120%;
+
+    text-align: center;
+
+    color: #343A40;
+}
+
+.mensajeDos{
+    height: 60px;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+
+    text-align: center;
+
+    color: #495057;
+}
+
+/*Mensaje Error*/
+#mensajeError{
+    display: none;
+
+    width: 70%;
+    height: 66px;
+
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 120%;
+
+    text-align: center;
+
+    color: #343A40;
+
+    margin: 5% 15% 0 15%;
+}
+
+/*Texto Resultado*/
+#txtResultado{
+    display: none;
+
+    width: 90%;
+    height: 80%;
+
+    overflow: auto;
+
+    word-wrap: break-word;
+    
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+
+    margin: 5%;
+}
+
+#btnCopiar{
+    display: none;
+
+    height: 77px;
+    width: 80%;
+
+    background: #FFFFFF;
+
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 19px;
+
+    text-align: center;
+
+    color: #0A3871;
+
+    margin: 5% 10%;
+}
+
+footer{
+    height: auto;
+
+    text-align: center;
+    
+    background: #D8DFE8;
+}
+
+footer img{
+    width: 24px;
+}
+
+/*Footer Datos Desarrollador*/
+.datosDesarrollador{
+    display: inline-block;
+
+    font-size: 18px;
+
+    margin: 20px 0 20px 20px;
+}
+
+.datosDesarrollador p{
+    margin: 0;
+}
