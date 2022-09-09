@@ -254,3 +254,120 @@ footer img{
 .datosDesarrollador p{
     margin: 0;
 }
+
+@media screen and (max-width: 1024px){
+
+    /*Logo*/
+    h1 img{
+        width: 31.09px;
+        height: 50.58px;
+        left: 40px;
+        top: 73.42px;
+    }
+
+    main{
+        display: block;
+        padding: 40px;
+    }
+
+    /*Seccion Accion*/
+    .secAccion{
+        display: block;
+    
+        width: 100%;
+    }
+
+    /*Ingresar Texto*/
+    #txtAccion{
+        width: 100%;
+        height: 715px;
+    
+        margin: 170px 0 0 0;
+    }
+
+    /*Requisitos de Texto*/
+    .secAccion P{
+        width: 45%;
+    
+        margin: 20px 0 5px 0;
+    }
+
+    /*Botones Accion*/
+    .btnsAccion{
+        display: flex;
+        gap: 5%;
+    
+        height: 80px;
+        width: 100%;
+    
+        margin: 0;
+    }
+
+    #btnEncriptar{
+        width: 47.5%;
+    }
+
+    #btnDesencriptar{
+        width: 47.5%;
+    }
+
+    /*Seccion Resultado*/
+    .secResultado{
+        display: block;
+        width: 90%;
+        height: auto;
+
+        margin-top: 40px;
+
+        padding: 5%;
+    }
+
+    /*Imagen Muñeco Buscando*/
+    #munheco{
+        display: none;
+    }
+
+    #mensajeEspera{
+        width: 70%;
+
+        margin: 0 15%;
+    }
+
+    .mensajeUno{
+        height: 35px;
+        
+        font-size: 24px;
+    }
+
+    .mensajeDos{
+        height: 27px;
+
+        font-size: 16px;
+    }
+
+    /*Mensaje Error*/
+    #mensajeError{
+        width: 70%;
+        height: 35px;
+        
+        font-size: 24px;
+
+        margin: 0 15%;
+    }
+
+    /*Texto Resultado*/
+    #txtResultado{
+        width: 90%;
+        height: min-content;
+    
+        margin: 0 5%;
+    }
+
+    #btnCopiar{
+        height: 75px;
+        width: 80%;
+    
+        margin: 0 10%;
+        margin-top: 20px;
+    }
+}
