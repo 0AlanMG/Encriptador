@@ -101,7 +101,7 @@
 
     function encriptar (){
         if(txtAccion.value != "" && txtAccion.value != null){
-            var letras = txtAccion.value.split('');
+            var letras = txtAccion.value.toLowerCase().split('');
         
             if(validar(letras)){
                 for(var pLetras = 0; pLetras < letras.length; pLetras++){
@@ -132,7 +132,7 @@
 
     function desencriptar(){
         if(txtAccion.value != "" && txtAccion.value != null){
-            var resultado = txtAccion.value;
+            var resultado = txtAccion.value.toLowerCase();
         
             if(validar(resultado.split(''))){
                 while(resultado.includes("ai") || resultado.includes("enter") || resultado.includes("imes") || resultado.includes("ober") || resultado.includes("ufat")){
