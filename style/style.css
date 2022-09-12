@@ -255,7 +255,38 @@ footer img{
     margin: 0;
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1450px){
+    /*Requisitos de Texto*/
+    .secAccion P{
+        width: 40%;
+    }
+
+    /*Seccion Resultado*/
+    #munheco{
+        margin-top: 200px;
+    }
+
+    .mensajeUno{
+        height: 70px;
+        
+        font-size: 26px;
+    }
+
+    .mensajeDos{
+        height: 80px;
+
+        font-size: 18px;
+    }
+
+    /*Texto Resultado*/
+    #txtResultado{
+        width: 80%;
+    
+        margin: 10%;
+    }
+}
+
+@media screen and (max-width: 1104px){
 
     /*Logo*/
     h1 img{
@@ -372,7 +403,7 @@ footer img{
     }
 }
 
-@media screen and (max-width: 428px){
+@media screen and (max-width: 730px){
 
     /*Logo*/
     h1 img{
@@ -448,5 +479,37 @@ footer img{
 
     #btnCopiar{
         height: 65px;
+    }
+}
+
+@media screen and (max-width: 240px){
+    
+    /*Requisitos de Texto*/
+    .secAccion P{
+        width: 100%;
+    
+        margin: 20px 0 5px 0;
+
+        font-size: 10px;
+    }
+
+    /*Seccion Resultado*/
+    .mensajeUno{
+        height: 42px;
+
+        font-size: 16px;
+    }
+
+    .mensajeDos{
+        height: 30px;
+
+        font-size: 10px;
+    }
+
+    /*Mensaje Error*/
+    #mensajeError{
+        height: 30px;
+
+        font-size: 10px;
     }
 }
