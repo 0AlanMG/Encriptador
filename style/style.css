@@ -371,3 +371,82 @@ footer img{
         margin-top: 20px;
     }
 }
+
+@media screen and (max-width: 428px){
+
+    /*Logo*/
+    h1 img{
+        left: 20px;
+        top: 30px;
+    }
+
+    main{
+        padding: 20px;
+    }
+    
+    /*Ingresar Texto*/
+    #txtAccion{
+        height: 280px;
+    
+        margin: 140px 0 0 0;
+    }
+
+    /*Requisitos de Texto*/
+    .secAccion P{
+        width: 100%;
+    
+        margin: 20px 0 5px 0;
+
+        font-size: 12px;
+    }
+
+    /*Botones Accion*/
+    .btnsAccion{
+        display: block;
+
+        height: 160px;
+    }
+
+    #btnEncriptar{
+        width: 100%;
+        height: 75px;
+
+        margin-bottom: 10px;
+
+        font-size: 18px;
+    }
+
+    #btnDesencriptar{
+        width: 100%;
+        height: 75px;
+
+        font-size: 18px;
+    }
+
+    /*Seccion Resultado*/
+    #mensajeEspera{
+        width: 80%;
+
+        margin: 0 10%;
+    }
+
+    .mensajeUno{
+        height: 58px;
+    }
+
+    .mensajeDos{
+        height: 52px;
+    }
+
+    /*Mensaje Error*/
+    #mensajeError{
+        width: 80%;
+        height: 58px;
+
+        margin: 0 10%;
+    }
+
+    #btnCopiar{
+        height: 65px;
+    }
+}
